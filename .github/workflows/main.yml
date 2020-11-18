@@ -19,5 +19,7 @@ jobs:
         ao-token-prod: 'some-special-secret'
         alpine-version: ${{matrix.os-version}}
     # Use the output from the `alpine` step
+    - name: show all arguments from first script
+      run echo "all arguments ${{steps.alpine.outputs.all-args}}"
     - name: Get alpine version
       run: echo "alpine ${{steps.alpine.outputs.version}}, branch ${{steps.alpine.outputs.branch-to-test}}"

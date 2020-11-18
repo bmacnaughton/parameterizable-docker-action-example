@@ -4,6 +4,8 @@ ALPINE_VERSION=$1
 BRANCH=$2
 TOKEN=$3
 
+echo "::set-output name=all-args::$*"
+
 cd /docker-action || exit 1
 echo "creating docker image with alpine version: $ALPINE_VERSION"
 
