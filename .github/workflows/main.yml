@@ -15,7 +15,9 @@ jobs:
       id: alpine
       uses: ./
       with:
+        branch-to-test: 'master'
+        ao-token-prod: 'some-special-secret'
         alpine-version: ${{matrix.os-version}}
     # Use the output from the `alpine` step
     - name: Get alpine version
-      run: echo "Alpine version is ${{ steps.alpine.outputs.version }}"
+      run: echo "alpine ${{steps.alpine.outputs.version}}, branch ${{steps.alpine.outputs.branch-to-test}}"
