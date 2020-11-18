@@ -12,6 +12,6 @@ runs:
   using: 'docker'
   image: 'Dockerfile'
   args:
-    - ${{ inputs.alpine-version }}
+    - ${{inputs.alpine-version}}
     - ${{inputs.branch-to-test}}
     - ${{inputs.ao-token-prod}}
