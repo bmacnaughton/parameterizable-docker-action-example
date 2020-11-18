@@ -21,5 +21,7 @@ jobs:
     # Use the output from the `alpine` step
     - name: show all arguments from first script
       run: echo "all arguments ${{steps.alpine.outputs.all-args}}"
+    - name: all arguments from second script
+      run: echo "all args 2 ${{steps.alpine.outputs.all-args-2}}"
     - name: Get alpine version
       run: echo "alpine ${{steps.alpine.outputs.version}}, branch ${{steps.alpine.outputs.branch-to-test}}"
