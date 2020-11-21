@@ -1,6 +1,7 @@
 # Container image that runs your code
 ARG alpine_version
-FROM alpine:${alpine_version}
+FROM node:${alpine_version}
+#FROM alpine:${alpine_version}
 
 ARG branch
 ARG token

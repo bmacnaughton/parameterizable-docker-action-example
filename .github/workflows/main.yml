@@ -4,7 +4,8 @@ jobs:
   parameterizable_docker_action_test_job:
     strategy:
       matrix:
-        os-version: ['3.9.5']
+        #os-version: ['3.9.5']
+        os-version: ['10-alpine3.9']
     runs-on: ubuntu-latest
     name: A job to create parameterizable docker action
     steps:
